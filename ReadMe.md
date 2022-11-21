@@ -8,7 +8,7 @@ It is super simple
 
 1.  clone the repo into your project  
 ```sh   
-git clone https://github.com  
+git clone https://github.com/katongole-isaac/react-from-scratch
 ```  
 2.  Run the following command to install the dependencies  
 ```sh   
