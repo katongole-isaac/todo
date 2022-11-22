@@ -10,11 +10,15 @@ It is super simple
 ```sh   
 git clone https://github.com/katongole-isaac/react-from-scratch
 ```  
-2.  Run the following command to install the dependencies  
+2. Then move into the project
+```sh
+ cd react-from-scratch
+```
+3.  Run the following command to install the dependencies  
 ```sh   
 npm install 
 ```  
-3. Run the following for development environment
+4. Run the following for development environment
  ```sh   
 npm run start 
 ```  
