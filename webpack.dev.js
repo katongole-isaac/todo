@@ -4,6 +4,7 @@ const path = require("path");
 
 module.exports = merge(webpackConfig, {
   mode: "development",
+  devtool: "source-map",
   devServer: {
     static: {
       directory: path.join(__dirname, "public/"),

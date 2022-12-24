@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --user-control-height: 12%;
+  --app-container-height: 100vh;
+  --app-header: 8%;
+  --todo-items-height: calc(
+    var(--app-container-height) -
+      (var(--user-control-height) + var(--app-header))
+  );
+  --app-color: #f1f2f6;
+  --todo-item-text-color: #153243;
+  --todo-item-background: #fafaff;
+  --todo-header-controls-minHeight: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-app {
+  background: var(--app-color);
+  /* min-height: ; */
+}
+.app-header {
+  height: var(--app-header);
+}
+.app-container {
+  height: var(--app-container-height);
+}
+@media screen and (min-width: 500px) {
+  .app-container {
+    max-width: 700px;
+  }
+}
+
+.user-controls {
+  height: var(--user-control-height);
+  margin-bottom: 2px;
+}
+.todo-items-list {
+  color: var(--todo-item-text-color);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-height: var(--todo-items-height);
+  height: var(--todo-items-height);
+}
+.todo-items-list::-webkit-scrollbar {
+  width: 4px;
+  cursor: auto;
+}
+.todo-items-list::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 2px;
+}
+
+.todo-items-list::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+.user-controls input[type="text"]:focus {
+  border-color: black;
+}
+
+.todo-item {
+  background: var(--todo-item-background);
+}
+
+::selection {
+  background: lightblue;
+}
+
+.material-symbols-outlined:hover {
+  padding: 2px;
+  background: lightgrey;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.todo-header-controls {
+  min-height: var(--todo-header-controls-minHeight);
+}
+
+.dropdown-select {
+  width: 150px;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-options {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+.hide-dropdown {
+  display: none;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-arrow {
+  transform: rotate(180deg);
+}
+.dropdown-item {
+  cursor: pointer;
+  border-radius: 3px;
+}
+.dropdown-item:hover {
+  background: #ebf2fa;
+}
+.dropdown-item .radio {
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.checkbox {
+  padding: 1px;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  cursor: pointer;
+  background: #d6d9ce;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:hover {
+  background: lightgrey;
+}
+
+input[type="checkbox"]::after {
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 20px;
+  display: none;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+}
+
+input[type="checkbox"]:checked {
+  background: #333533;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+.vh-stack p {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.close-btn {
+  border: 1px solid #b3ccda;
+}
+.close-btn:hover {
+  font-size: 15px;
+  border: 1px solid #153243;
+}
+
+.add-todo-btn {
+  background: cornflowerblue;
+  border: none;
+}

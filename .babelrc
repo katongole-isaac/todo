@@ -1,3 +1,4 @@
 {
-  "presets": ["@babel/env", "@babel/preset-react"]
+  "presets": ["@babel/env", "@babel/preset-react"],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"] // Enabling the babel parses dynamic import not transforming them.
 }
